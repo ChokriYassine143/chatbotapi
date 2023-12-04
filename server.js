@@ -13,6 +13,7 @@ app.get("/chatbot/", async (req, res) => {
   res.send("ronaldo is the GOAT");
     
   }
+  else 
   {
      if (!prompt) {
     return res.status(400).send("Missing 'prompt' parameter.");
