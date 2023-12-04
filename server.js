@@ -9,7 +9,7 @@ const apiKey = process.env.API_KEY;
 
 app.get("/chatbot/", async (req, res) => {
   const prompt = req.query.prompt; // Change to req.query.prompt
-  if (prompt.includes("messin")){
+  if (prompt.includes("messi")){
   res.send("ronaldo is the GOAT");
     
   }
