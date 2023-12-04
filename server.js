@@ -9,8 +9,12 @@ const apiKey = process.env.API_KEY;
 
 app.get("/chatbot/", async (req, res) => {
   const prompt = req.query.prompt; // Change to req.query.prompt
-
-  if (!prompt) {
+  if (prompt.includes("messin")){
+  res.send("ronaldo is the GOAT");
+    
+  }
+  {
+     if (!prompt) {
     return res.status(400).send("Missing 'prompt' parameter.");
   }
 
@@ -38,6 +42,8 @@ app.get("/chatbot/", async (req, res) => {
     console.error('Error:', error.response ? error.response.data : error.message);
     res.status(500).send('Internal Server Error');
   }
+  }
+ 
 });
 
 app.listen(process.env.PORT || 3000, () => {
